@@ -1,0 +1,84 @@
+{{ partial "meta" . }}
+<body class="index {{ with .Params.class }}{{ . }}{{ end }}">
+
+{{ partial "nav" . }}
+
+
+{{ $style := resources.Get "sass/_index.scss" | toCSS  }}
+<style>
+{{ $style.Content | safeCSS }}
+</style>
+
+<main class="padd-l">
+  <h1 class="h1">The original JAMStack status page</h1>
+  <h2>Loved by the open source community, including 
+      <a href="https://blog.torproject.org/check-status-of-tor-services" class="accented">Tor</a> and
+      <a href="https://status.chocolatey.org/" class="accented">Chocolatey</a> since 2017</h2>
+</main>
+ 
+<section id="features" class="padd-s">
+
+  <div class="container row">
+    <div class="col padd-l">
+      <svg class="icon icon--2x" viewBox="0 0 24 24">
+        <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,10.84 21.79,9.69 21.39,8.61L19.79,10.21C19.93,10.8 20,11.4 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4C12.6,4 13.2,4.07 13.79,4.21L15.4,2.6C14.31,2.21 13.16,2 12,2M19,2L15,6V7.5L12.45,10.05C12.3,10 12.15,10 12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12C14,11.85 14,11.7 13.95,11.55L16.5,9H18L22,5H19V2M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12H16A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8V6Z" />
+      </svg>
+      <p><strong>Focused &amp; adaptable design</strong></p>
+      <p>When something is on fire, the only thing your users want is the bottom line. Skip the flashy stuff; cState gets you set up with just what you need.</p>
+    </div>
+    <div class="col padd-l">
+      <svg class="icon icon--2x" viewBox="0 0 24 24">
+        <path d="M11.5,20L16.36,10.27H13V4L8,13.73H11.5V20M12,2C14.75,2 17.1,3 19.05,4.95C21,6.9 22,9.25 22,12C22,14.75 21,17.1 19.05,19.05C17.1,21 14.75,22 12,22C9.25,22 6.9,21 4.95,19.05C3,17.1 2,14.75 2,12C2,9.25 3,6.9 4.95,4.95C6.9,3 9.25,2 12,2Z" />
+      </svg>
+      <p><strong>Fast in any enviroment</strong></p>
+      <p>Host it alongside your other static sites or apps or take advantage of Netlify CMS for an even easier administration experience. It is free to set up and use.</p>
+    </div>
+    <div class="col padd-l">
+      <svg class="icon icon--2x" viewBox="0 0 24 24">
+        <path d="M10,2A2,2 0 0,1 12,4V8.5C12,8.5 14,8.25 14,9.25C14,9.25 16,9 16,10C16,10 18,9.75 18,10.75C18,10.75 20,10.5 20,11.5V15C20,16 17,21 17,22H9C9,22 7,15 4,13C4,13 3,7 8,12V4A2,2 0 0,1 10,2Z" />
+      </svg>
+      <p><strong>Works with IE8+</strong></p>
+      <p>Outstanding browser support, both on mobile and desktop devices, fuels cState. All default configurations are tested to work on almost any device.</p>
+    </div>
+  </div>
+
+  <div class="padd-l"></div>
+
+  <div class="container row">
+    <div class="col padd-l">
+      <svg class="icon icon--2x" viewBox="0 0 24 24">
+        <path d="M2.64,10.33L2.62,10.27L2.84,10L2.96,9.92H6.8L6.83,10L6.65,10.26L6.54,10.32L2.64,10.33M1.03,11.31L1,11.26L1.22,10.97L1.34,10.91H6.24L6.29,11L6.21,11.24L6.11,11.31H1.03M3.63,12.3L3.59,12.24L3.75,11.96L3.85,11.9H6L6.07,11.97L6.05,12.22L5.97,12.3H3.63M14.78,10.14L13,10.61C12.81,10.65 12.8,10.66 12.66,10.5C12.5,10.32 12.39,10.21 12.16,10.1C11.5,9.76 10.83,9.86 10.22,10.25C9.5,10.73 9.11,11.42 9.12,12.3C9.13,13.16 9.72,13.87 10.57,14C11.3,14.09 11.91,13.83 12.4,13.28L12.69,12.89H10.62C10.4,12.89 10.35,12.75 10.42,12.57L10.97,11.39C11,11.33 11.08,11.22 11.24,11.22H14.68C14.83,10.72 15.09,10.26 15.43,9.81C16.21,8.78 17.16,8.24 18.43,8C19.5,7.82 20.56,7.93 21.5,8.57C22.34,9.15 22.87,9.93 23,10.96C23.19,12.41 22.76,13.59 21.76,14.61C21.05,15.33 20.18,15.78 19.19,16L18.33,16.08C17.35,16.06 16.46,15.78 15.71,15.13C15.19,14.68 14.83,14.14 14.65,13.5C14.5,13.74 14.38,13.97 14.21,14.2C13.44,15.22 12.43,15.85 11.15,16C10.1,16.16 9.12,15.95 8.26,15.31C7.47,14.71 7,13.91 6.9,12.92C6.76,11.75 7.1,10.7 7.81,9.78C8.57,8.78 9.58,8.15 10.82,7.92C11.82,7.74 12.79,7.86 13.66,8.44C14.23,8.82 14.63,9.34 14.9,9.96C14.94,10.05 14.9,10.11 14.78,10.14M20.89,11.74L20.86,11.38C20.67,10.32 19.69,9.72 18.67,9.95C17.66,10.17 17,10.8 16.79,11.81C16.6,12.65 17,13.5 17.77,13.84C18.36,14.1 18.96,14.06 19.53,13.78C20.37,13.35 20.84,12.66 20.89,11.74Z" />
+      </svg>
+      <p><strong>Built with Golang</strong></p>
+      <p>Thanks to Hugo, and its speedy Golang architecture, cState is bound to keep up its performance even with hundrends or thousands of incident entries.</p>
+    </div>
+    <div class="col padd-l">
+      <svg class="icon icon--2x" viewBox="0 0 142 142">
+        <g id="Press" fill="none" fill-rule="evenodd">
+          <g id="press-v4" fill="#000" transform="translate(-529 -1837)">
+            <g id="logo-resources" transform="translate(247 1109)">
+              <g id="Group-14" transform="translate(3 236)">
+                <g id="Group-14-Copy-5" transform="translate(240 438)">
+                  <path id="logomark-light" d="M139 104.2a6 6 0 0 1 1.8 1.4h.1l14-5.9v-.1-.2l-13-12.9h-.1c-.1 0-.2 0-.2.2l-2.8 17.3.2.2zm-28.8-11.6c.7 1 1.1 2.2 1.2 3.4l.1.2 20.7 8.7h.2c.6-.5 1.3-.9 2-1.1.1 0 .2 0 .2-.2l3.4-21-.1-.1-13-12.9-.1.1-14.6 22.6v.3zm70.5 32.3l-22.2-22h-.1l-15 6.3-.2.2.1.2 37 15.7h.2l.2-.2v-.2zm-3.7 3.6l-35.5-15h-.1-.2a6 6 0 0 1-4 2.4l-.3.1-3.8 23.4.1.2a6 6 0 0 1 2.3 4.2l.2.1 21.4 4.5h.2l19.7-19.6v-.2-.1zm-47-20l-19.5-8.2-.2.1a7.1 7.1 0 0 1-6 3.2l-1.1-.1h-.1l-.2.1-16 24.8v.2l.2.1 42.7-18.2.1-.2v-.5l.2-1c0-.2-.1-.2-.2-.3zm23.3 43.4l-18.8-4h-.1l-.2.1c-.7 1-1.6 1.7-2.7 2l-.1.3-4.5 27.8v.2H127.3l26.2-26v-.2-.2zm-26.3-2a6.2 6.2 0 0 1-3.6-4.1l-.2-.2-35-7.2-.2.1-.5.8v.2l31.8 46.1H119.6l1.9-1.9v-.1L127 150c.1 0 .1 0 0-.1zm-38-15.8l.1.2 34.7 7.2.2-.1a6 6 0 0 1 5-3.1l.1-.2 3.7-23v-.2l-.9-.6v-.1h-.2L89 132.5l-.1.3.1 1.3zM74.3 140l-.5-.7-.2-.2-15 6.4-.2.1.1.2 7.3 7.2.1.1.2-.1 8.3-12.9h-.1zm9.9 2.4l-.2-.2a8 8 0 0 1-6 .3l-.3.2-8.6 13.5H69v.2l40 39.6v.1h.2l7-7v-.3l-32-46.4zm-5.6-15.6h.2a10 10 0 0 1 1.9-.1c.7 0 1.4 0 2 .3h.1l.2-.2 16.1-25v-.3a7 7 0 0 1-1.8-6.5v-.2C95.2 93.7 77 86 77 86h-.2l-15.3 15.3v.3l17 25zM80.4 83l19.1 8h.2a7.3 7.3 0 0 1 6.9-1.2c.1 0 .2 0 .2-.2l15-23v-.3l-12.4-12.2-.1-.1h-.2L80.4 82.7v.4zm-7 48l1.5-2v-.3l-16.5-24h-.2L39 123.6l-.1.1c0 .1 0 .2.2.2l34.1 7.1zm-1.7 4.2l-.1-.2-29.6-6.2h-.1l-.2.1v.3L55 142.3h.1l16.5-7 .1-.1z"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+      <p><strong>Works with Netlify</strong></p>
+      <p>Host it alongside your other static sites or apps or take advantage of Netlify CMS for an even easier administration experience. It is free to set up and use.</p>
+    </div>
+    <div class="col padd-l">
+      <svg class="icon icon--2x" viewBox="0 0 24 24">
+        <path d="M13,3L14,3.06C16.8,1.79 19.23,1.64 20.5,2.92C21.5,3.93 21.58,5.67 20.92,7.72C21.61,9 22,10.45 22,12L21.95,13H9.08C9.45,15.28 11.06,17 13,17C14.31,17 15.47,16.21 16.2,15H21.5C20.25,18.5 16.92,21 13,21C11.72,21 10.5,20.73 9.41,20.25C6.5,21.68 3.89,21.9 2.57,20.56C1,18.96 1.68,15.57 4,12C4.93,10.54 6.14,9.06 7.57,7.65L8.38,6.88C7.21,7.57 5.71,8.62 4.19,10.17C5.03,6.08 8.66,3 13,3M13,7C11.21,7 9.69,8.47 9.18,10.5H16.82C16.31,8.47 14.79,7 13,7M20.06,4.06C19.4,3.39 18.22,3.35 16.74,3.81C18.22,4.5 19.5,5.56 20.41,6.89C20.73,5.65 20.64,4.65 20.06,4.06M3.89,20C4.72,20.84 6.4,20.69 8.44,19.76C6.59,18.67 5.17,16.94 4.47,14.88C3.27,17.15 3,19.07 3.89,20Z" />
+      </svg>
+      <p><strong>Works with IE8+</strong></p>
+      <p>Outstanding browser support, both on mobile and desktop devices, fuels cState. All default configurations are tested to work on almost any device.</p>
+    </div>
+  </div>
+
+</section>
+
+
+{{ partial "foot" . }}

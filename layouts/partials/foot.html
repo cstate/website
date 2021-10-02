@@ -1,0 +1,14 @@
+<div class="padd-xl"></div>
+
+<footer class="ingrained center padd-xl">
+
+  <p>&copy; Mantas Vilčinskas, 2021. Licensed under MIT </p>
+
+</footer>
+
+
+
+{{ $w := resources.Get "js/app.js" }}
+<script src="{{ $w.RelPermalink }}"></script>
+</body>
+</html>

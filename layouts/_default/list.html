@@ -1,0 +1,25 @@
+{{ partial "meta" . }}
+<body class="index">
+
+{{ partial "nav" . }}
+{{ $currentLang := (T "lg") }}
+
+  
+<main class="contain--less padd-s">
+  <div class="padd-s">
+    <h1 class="h1 reg">{{ .Page.Title }}</h1>
+    <div class="padd-s"></div>
+    <p class="h5 ingrained">{{ .Params.description }}</p>
+  </div>
+  <div class="padd-s">
+    <hr>
+  </div>
+  <div class="h5">  
+  {{ range .Pages }}
+    <a href="{{ .RelPermalink }}" class="padd-s block">{{ .Title }}</a><hr>
+  {{ end }}
+  </div>
+
+</main>
+
+{{ partial "foot" . }}
