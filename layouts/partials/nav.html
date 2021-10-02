@@ -1,0 +1,57 @@
+
+<nav class="nav"> 
+  <div class="container row-mobile">
+    <div class="flex-strong">
+      <a href="/" class="" aria-label="Logo / Go home">
+        <img src="/cstatelogo.svg" alt="logo" class="size-xxl">
+      </a>
+    </div>
+    
+    <div class="col right padd-l flex-strong">
+      <div class="hide-on-mobile" aria-label="Links visible on desktop">
+        <a href="#features">Features</a>  
+        <span class="padd-s"></span> 
+        <a href="https://github.com/cstate/cstate/wiki">Documentation</a>   
+        <span class="padd-s"></span> 
+        <a href="https://github.com/sponsors/mistermantas">Donate</a>   
+        <span class="padd-s"></span>  
+        <a href="https://app.netlify.com/start/deploy?repository=https://github.com/cstate/example">Deploy</a>   
+        <span class="padd-s"></span>  
+        <a href="https://github.com/cstate/">GitHub</a>   
+      </div>  
+
+      <div class="nav__menu clickable hide-on-desktop" onclick="toggleMenu()">
+        <div class="nav__menu--open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div>
+        <div class="nav__menu--close hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div> 
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- -->
+
+  <div class="hidden nav__mobile hide-on-desktop">
+    <div class="card padd-xl">
+      <div class="padd-l"></div>
+ 
+      <div class="links-block">  
+          
+        <div class="h4">
+          <a href="#features">Features</a>  
+          <span class="padd-s"></span> 
+          <a href="https://github.com/cstate/cstate/wiki">Documentation</a>   
+          <span class="padd-s"></span> 
+          <a href="https://github.com/sponsors/mistermantas">Donate</a>   
+          <span class="padd-s"></span>  
+          <a href="https://app.netlify.com/start/deploy?repository=https://github.com/cstate/example">Deploy</a>   
+          <span class="padd-s"></span>  
+          <a href="https://github.com/cstate/">GitHub</a>   
+        </div> 
+      </div> 
+      
+      <div class="padd-l"></div>
+    </div>
+  </div>
+</nav>
+
+<div class="nav__mobile-background hidden" onclick="toggleMenu()"></div> 

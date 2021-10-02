@@ -1,0 +1,20 @@
+html {
+  font: 400 110%/1.6 'Montserrat', sans-serif;
+  color: #000; 
+  letter-spacing: 0.5px;
+  font-feature-settings: 'calt';
+  background: #fff;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+svg, img {
+  vertical-align: middle;
+}
+
+::selection { background: #B4D5FF; }
+ 

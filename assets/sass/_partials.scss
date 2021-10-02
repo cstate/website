@@ -1,0 +1,112 @@
+.nav {
+  z-index: 1000;
+  position: relative;
+  width: 100%;  
+  padding: 0;
+  background: #FF4D00;
+  
+  a { font-weight: bold; }
+
+  &__logo svg {
+    width: auto;
+    height: 32px;
+  }
+
+  a, .clickable {
+    transition: color 0.5s;
+    color: #fff;
+  }
+
+  // Details
+  a:hover, .clickable:hover {
+    color: #FFC100;
+    transition: color 0s;
+  } 
+}
+
+@media (min-width: 640px) {
+  .nav__logo svg { height: 32px; }
+}
+
+
+#thing {
+  padding: 10px;
+  border-radius: 5px;
+
+ /* HOVER OFF */
+  -webkit-transition: padding 2s;
+}
+
+#thing:hover {
+  padding: 20px;
+  border-radius: 15px;
+
+ /* HOVER ON */
+  -webkit-transition: border-radius 2s;
+}
+
+
+
+
+// Mobile nav dropdown-style
+.nav__mobile { 
+  animation: panelSlideUp 0.25s;
+  z-index: 1000;
+}
+
+.nav__mobile-services a {
+  display: block; 
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(#000, 0.1);
+  color: #000;
+}
+
+
+.nav__mobile-background {
+  z-index: 999;
+  background: rgba(#000, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  animation: fadeIn 0.2s;
+}
+
+
+
+/**
+ * Dropdown
+ */
+
+
+@keyframes fadeInDelayed {
+  0% { opacity: 0; }
+  75% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+ 
+
+// Card
+.card { 
+  margin: 0;
+  display: block;
+  background: #000;
+  transition: box-shadow 0.25s, transform 0.25s;
+  // Hover
+  &:hover {
+    box-shadow: 0 0.2rem 0.8rem rgba(#000, .1);
+    //box-shadow: 0 0.4rem 0.8rem rgba(#000, .15);
+    transform: translateY(-0.2rem);
+  }
+}

@@ -1,0 +1,44 @@
+{{ partial "meta" . }}
+<body class="error">
+
+{{ partial "nav" . }}
+
+
+<style> 
+@media (min-width: 960px) {
+  .pinned-text {
+    position: absolute;
+    top: 256px;
+    left: 0;
+    max-width: 40vw;
+    color: #000;
+  }
+
+  .pinned-text .h1 { color: #888; }
+}
+</style>
+
+  <div class="pinned-text padd-xl">
+
+    <h1 class="h1 big">Nothing here</h1>
+    <div class="padd-l"></div>
+    <p>
+      <b>Error 404</b><br>
+      Sorry about this. Check if the link you have is correct. If it looks like it, <a href="/contact"><u>please send a message</u></a>! If you do, a big thank you!
+  
+      <br><br>
+  
+      Yes, this website has been around for so long that taking care of it is like babying a child which is like... a whole thing. Maybe take a look at something more special from MNTS?
+  
+      <br><br>
+  
+      <a href="/"><u>Restart at the start</u></a>
+    </p>
+  
+  </div>
+  
+  <img src="/wall.png" class="stretch" alt="Decoration">
+
+  <div class="padd-xxl"></div>
+
+{{ partial "foot" . }}

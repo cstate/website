@@ -1,0 +1,8 @@
+{{ partial "meta" . }}
+<body class="index {{ with .Params.class }}{{ . }}{{ end }}">
+
+{{ partial "nav" . }}
+
+{{ .Content }}
+
+{{ partial "foot" . }}

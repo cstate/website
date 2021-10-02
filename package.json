@@ -1,0 +1,15 @@
+{
+  "name": "atlas",
+  "private": true,
+  "scripts": {
+    "start": "hugo server",
+    "build": "hugo",
+    "build:functions": "netlify-lambda build assets/lambda",
+    "server": "hugo server -p 1500"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "netlify-lambda": "^1.5.0",
+    "postcss-cli": "^6.1.3"
+  }
+}

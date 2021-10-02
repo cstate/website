@@ -1,0 +1,127 @@
+<style>
+.works {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img { display: block; }
+
+.work {
+	flex: 1 0 calc(33.3% - 32px);
+  margin: 8px;
+  padding: 0;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  background: #fff;
+}
+
+@media (min-width: 640px) {
+  a.work {
+    max-width: calc(33.3% - 16px);
+  }
+}
+
+@media (max-width: 900px) {
+  .work {
+    flex: 1 0 calc(33.3% - 16px);
+  }
+}
+
+@media (max-width: 640px) {
+  .work {
+    flex: 1 0 calc(50% - 16px);
+  }
+}
+
+
+.work img, .work {
+  transition: 
+  box-shadow 0.1s cubic-bezier(0.5, 0.8, 0.8, 0.7),
+  transform 0.1s cubic-bezier(0.5, 0.8, 0.8, 0.7);
+}
+
+.work:hover img {
+  transform: scale(1.025) translateY(-4%);
+  box-shadow: 0 16px 32px rgba(0,0,0, 0.15);
+  z-index: 100;
+}
+
+.work--with-preview:hover {
+  background-size: cover;
+  background-position: center;
+
+
+  transform: scale(1.025) translateY(-4%);
+  box-shadow: 0 16px 32px rgba(0,0,0, 0.15);
+  z-index: 100;
+}
+
+.work--with-preview:hover img,
+.work--with-preview:active img {
+  opacity: 0 !important;
+}
+
+.work:active img,
+.work--with-preview:active {
+  transform: scale(1) translateY(0);
+  box-shadow: none;
+  z-index: 100;
+  opacity: 0.5;
+}
+
+
+.work img {
+  width: 100%;
+  height: auto;
+}
+
+
+a[href="https://www.behance.net/gallery/64024901/RabbitNode-Website-Redesign-Dark-Mode-WHMCS"]:hover {
+  background-image: url(https://cdn.dribbble.com/users/1619292/screenshots/4717418/frame_7.1.png)
+}
+
+a[href="https://hop.mnts.lt"]:hover {
+  background-image: url(https://cdn.dribbble.com/users/1619292/screenshots/5450531/group_77.png)
+}
+
+a[href="https://dribbble.com/shots/6600590-MCList-Minecraft-Gaming-Server-Discovery-Sharing-Web-Design"]:hover {
+  background-image: url('https://cdn.dribbble.com/users/1619292/screenshots/6600590/ezgif.com-resize.gif');
+}
+
+a[href$="/portfolio/kunj/"]:hover {
+  background-image: url('https://cdn.dribbble.com/users/1619292/screenshots/5459384/group_3.png');
+}
+
+a[href$="/portfolio/tdg-xvi/"]:hover {
+  background-image: url('https://cdn.dribbble.com/users/1619292/screenshots/6227366/group_9.2_2x.png');
+}
+
+
+a[href$="/portfolio/tdg-xvii/"]:hover {
+  background-image: url('https://cdn.dribbble.com/users/1619292/screenshots/9986403/media/60bf5176d828e6a6ef350842e7462501.gif');
+}
+
+
+
+a[href$="/portfolio/tdg-www/"]:hover {
+  background-image: url('https://cdn.dribbble.com/users/1619292/screenshots/6166015/frame_7_2x.png');
+}
+
+a[href$="/portfolio/chem2art/"]:hover {
+  background-image: url('https://cdn.dribbble.com/users/1619292/screenshots/5728870/webp.net-gifmaker__1_.gif');
+}
+
+a[href$="/portfolio/interact/"]:hover {
+  background-image: url('https://cdn.dribbble.com/users/1619292/screenshots/5593607/group_8_2x.png');
+}
+a[href$="/portfolio/venelium/"]:hover {
+  background-image: url('/work/venelium.png');
+}
+a[href$="/portfolio/playlists/"]:hover {
+  background-image: url('https://cdn.dribbble.com/users/1619292/screenshots/9068145/media/06ac08b688107a9ad74b896c5af8b502.png');
+}
+
+a[href$="/portfolio/cryptoholic/"]:hover {
+  background-image: url('https://cdn.dribbble.com/users/1619292/screenshots/5514223/2018_11_07_20_30_37_bitcoin_added_to_list_of_scrabble_words_cryptocomrade.png')
+}
+
+</style>
