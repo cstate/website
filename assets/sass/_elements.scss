@@ -59,11 +59,10 @@ hr {
   }
   
   
-
   &--primary {
     background: #FF4D00;
-    color: #000;
-    &:hover { color: rgb(163, 161, 161); background: #000; }
+    color: #fff;
+    &:hover { color: #fff; background: #000; }
   }
 
   &--secondary {
@@ -74,6 +73,12 @@ hr {
   &--black {
     background: #000;
     color: #fff;
+  }
+
+  &--white {
+    color: #000;
+    background: #fff;
+    &:hover { background: #000; color: #FFC100; }
   }
 
   &--disabled {

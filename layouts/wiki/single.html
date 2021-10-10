@@ -1,0 +1,19 @@
+{{ partial "meta" . }}
+<body class="index {{ with .Params.class }}{{ . }}{{ end }}">
+
+{{ partial "nav" . }}
+
+
+
+<div class="container row padd-l">
+  <aside class="col-quarter"></aside>
+  <div class="padd-l"></div>
+  <article class="col">
+    <h1 class="h1">{{ .Title }}</h1>
+
+    {{ .Content }}
+  </article>
+</div>
+
+
+{{ partial "foot" . }}

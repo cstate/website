@@ -384,26 +384,26 @@ svg, img {
 ::selection {
   background: #B4D5FF; }
 
-.contain {
+.container {
   max-width: 1280px;
   margin: 0 auto; }
 
 .hide-on-light {
   display: none; }
 
-.contain--med {
+.container--med {
   max-width: 960px;
   margin: 0 auto; }
 
-.contain--less {
+.container--less {
   max-width: 680px;
   margin: 0 auto; }
 
-.contain--least {
+.container--least {
   max-width: 420px;
   margin: 0 auto; }
 
-.contain--larger {
+.container--larger {
   max-width: 1600px;
   margin: 0 auto; }
 
@@ -425,7 +425,7 @@ svg, img {
     color: #ddd; }
 
 .gray-bg {
-  background: #dfdfdf; }
+  background: #eee; }
 
 .stretch {
   width: 100%;
@@ -642,7 +642,6 @@ p {
 
 .h1, .h2, .h3, .big {
   letter-spacing: -1px;
-  color: #000;
   line-height: 1.1; }
 
 .h1 {
@@ -713,9 +712,9 @@ hr {
     box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.05); }
   .btn--primary {
     background: #FF4D00;
-    color: #000; }
+    color: #fff; }
     .btn--primary:hover {
-      color: #a3a1a1;
+      color: #fff;
       background: #000; }
   .btn--secondary {
     background: #FDEDEB;
@@ -723,6 +722,12 @@ hr {
   .btn--black {
     background: #000;
     color: #fff; }
+  .btn--white {
+    color: #000;
+    background: #fff; }
+    .btn--white:hover {
+      background: #000;
+      color: #FFC100; }
   .btn--disabled {
     background: #E0E0E0;
     color: #666; }
@@ -759,31 +764,19 @@ hr {
   background: #FF4D00; }
   .nav a {
     font-weight: bold; }
+  .nav__logo {
+    background: #000;
+    color: #fff;
+    padding: 12px 24px; }
   .nav__logo svg {
     width: auto;
-    height: 32px; }
+    height: 24px; }
   .nav a, .nav .clickable {
     transition: color 0.5s;
     color: #fff; }
   .nav a:hover, .nav .clickable:hover {
     color: #FFC100;
     transition: color 0s; }
-
-@media (min-width: 640px) {
-  .nav__logo svg {
-    height: 32px; } }
-
-#thing {
-  padding: 10px;
-  border-radius: 5px;
-  /* HOVER OFF */
-  -webkit-transition: padding 2s; }
-
-#thing:hover {
-  padding: 20px;
-  border-radius: 15px;
-  /* HOVER ON */
-  -webkit-transition: border-radius 2s; }
 
 .nav__mobile {
   animation: panelSlideUp 0.25s;
@@ -826,6 +819,7 @@ hr {
   margin: 0;
   display: block;
   background: #000;
+  color: #fff;
   transition: box-shadow 0.25s, transform 0.25s; }
   .card:hover {
     box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1);
