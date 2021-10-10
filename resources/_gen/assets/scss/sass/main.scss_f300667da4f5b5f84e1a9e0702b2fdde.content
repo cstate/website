@@ -425,7 +425,7 @@ svg, img {
     color: #ddd; }
 
 .gray-bg {
-  background: #dfdfdf; }
+  background: #eee; }
 
 .stretch {
   width: 100%;
