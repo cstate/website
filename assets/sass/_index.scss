@@ -5,12 +5,26 @@
 }
 
 main {
-  margin: 2vw;
+  padding: 5vw;
+  padding-bottom: 160px;
+  background-color: #FF4D00;
+  color: #fff;
+  a, .accented { color: #FFE8A2; }
 }
+ 
+.images {
+  position: relative;
+  top: -120px;
+} 
+
+#features {
+  position: relative;
+  top: -90px;
+} 
 
 .h1 {
   line-height: 0.9;
-  font-size: 10vw; 
+  font-size: 80px; 
   margin-bottom: 3vw;
 }
 

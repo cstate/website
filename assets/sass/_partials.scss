@@ -7,9 +7,15 @@
   
   a { font-weight: bold; }
 
+  &__logo {
+    background: #000;
+    color: #fff;
+    padding: 12px 24px;
+  }
+
   &__logo svg {
     width: auto;
-    height: 32px;
+    height: 24px;
   }
 
   a, .clickable {
@@ -23,30 +29,8 @@
     transition: color 0s;
   } 
 }
-
-@media (min-width: 640px) {
-  .nav__logo svg { height: 32px; }
-}
-
-
-#thing {
-  padding: 10px;
-  border-radius: 5px;
-
- /* HOVER OFF */
-  -webkit-transition: padding 2s;
-}
-
-#thing:hover {
-  padding: 20px;
-  border-radius: 15px;
-
- /* HOVER ON */
-  -webkit-transition: border-radius 2s;
-}
-
-
-
+ 
+  
 
 // Mobile nav dropdown-style
 .nav__mobile { 
@@ -102,6 +86,7 @@
   margin: 0;
   display: block;
   background: #000;
+  color: #fff;
   transition: box-shadow 0.25s, transform 0.25s;
   // Hover
   &:hover {
